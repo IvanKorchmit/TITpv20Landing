@@ -1,0 +1,130 @@
+:root {
+    --dark-color: rgb(197, 196, 127);
+    --med-color: rgb(163, 162, 111);
+    --light-color: rgb(104, 103, 69);
+}
+
+* { 
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+body { 
+    background-color: var(--dark-color);
+    background: linear-gradient(90deg, black 0%, var(--light-color) 35%, var(--med-color) 100%);
+}
+.header { 
+    background-color: var(--med-color);
+    color:white;
+    width:75%;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0%, 100% 63%, 0% 100%);
+    animation-name: fadeIn;
+    animation-duration: 3s;
+    
+}
+main { 
+    width:75%;
+    height: 100hv;
+    margin: 0 auto;
+    background: var(--light-color);
+    padding: 8rem 2rem 100rem 8rem;
+    margin-top: -5rem;
+    text-align: justify;
+}
+
+img { 
+    width:360px;
+    float: right;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    animation-name: bottom-top;
+    animation-duration: 5s;
+}
+.footer { 
+    width:75%;
+    margin: 0 auto;
+    background-color: var(--dark-color);
+    text-align: center;
+    padding: 3rem;
+}
+.text-box { 
+    display: inline;
+    animation-name: change-color;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    
+}
+.btn {
+    text-decoration: none;
+    text-align: center;
+    color:white;
+    border:2px solid #ffffff;
+    padding: 1rem;
+    top: 30px;
+    margin:2rem;
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 5s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    transition-property: transform;
+    transition-duration: 3s;
+}
+.btn:hover {
+    transform: rotate(360deg);
+}
+
+@keyframes fadeIn { 
+    0%
+    { 
+        opacity: 0;
+    }
+    100% { 
+        opacity: 1;
+    }
+}
+
+@keyframes size { 
+    0%
+    { 
+        font-size: 0pt;
+    }
+    100% { 
+        font-size: 70pt;
+    }
+}
+@keyframes bottom-top { 
+    0%
+    { 
+        width: 0px;
+    }
+    100% { 
+        width: 360px;
+    }
+}
+@keyframes change-color {
+    0% { 
+        color: black;
+    }
+    100% { 
+        color: white;
+    }
+}
+@keyframes go-down { 
+    0% {
+        height: -100px;
+    }
+    100% { 
+        height: 0px;
+    }
+}
+.price { 
+    font-size: 70pt;
+    position: absolute;
+    animation-name: size;
+    animation-duration: 5s;
+}
